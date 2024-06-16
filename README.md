@@ -1,16 +1,38 @@
-[![GS-Frame](https://img.shields.io/badge/github-GeoStat_Framework-468a88?logo=github&style=flat)](https://github.com/GeoStat-Framework)
-[![Gitter](https://badges.gitter.im/GeoStat-Examples/community.svg)](https://gitter.im/GeoStat-Examples/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# Dipole Tracer Tests
 
-# Template
+Function collection on analytical solutions for flow in a dipole flow setting 
+in log-normal layered hydraulic conductivity media following the paper 
 
-This is a template for an example repository.
+"Revisitation of the dipole tracer test for heterogeneous porous formations"
+A. Zech, C. D’Angelo, S. Attinger, A. Fiori, J. Hydrol, 2018
+https://doi.org/10.1016/j.advwatres.2018.03.006
 
-You can create a new example by simply clicking on "Use this template".
+## Background and Overview 
 
-The included example is showing the generation of a conditioned random field ensemble
-in 1D taken from [GSTools](https://geostat-framework.readthedocs.io/projects/gstools/en/stable/examples/06_conditioned_fields/00_condition_ensemble.html#sphx-glr-examples-06-conditioned-fields-00-condition-ensemble-py).
+Analytical solutions describe the breakthrough curve (BTC) of a tracer in 
+dipole flow (also named two well flow) setting  where water is injected at one
+well and extracted at another well. Tracer is added to the injection well either
+as a instantaneous pulse (infinitisimaly short duration) or constantly. 
 
+The solutions consider advective transport only. For dipole tests, it is well 
+know that advection is the most significant source of spreading due to the 
+non-uniform flow configuration. Local dispersion mechanisms like hydrodynamic 
+dispersion or molecular diffusion are less significant and can be neglected.
 
+The aquifer under consideration is non-homogeneous/heterogeneous where the structure
+is layered with a random distribution of hydraulic conductivity values K_i of each
+layer follow a stochastic distribution. In the manuscript Zech et al., 2018, 
+general solutions for the BTC are expressed as integrals. Specific solutions
+are derived considering the spatial distribution of K to be log-normal to a 
+mean KG and a variance sigma_K^2. These specific solutions are implemented here.
+
+The BTC solutions present the dependence on both, the dipole setting and the 
+aquifer configuration. The analysis is carried out by considering the travel 
+time of a generic solute particle, from the injection to the pumping well. 
+The probability density function (pdf) of such travel time is identical 
+to the BTC of a solute instantaneous pulse. The corresponding cumulative 
+density function (cdf's) describes the BTC of the solute for constant input. 
+                                            
 ## Structure
 
 Please try to organize your example in the given Structure
@@ -26,24 +48,13 @@ Please try to organize your example in the given Structure
 To make the example reproducible, it would be a good practice to provide one of
 the following files:
 - `requirements.txt` - requirements for [pip](https://pip.pypa.io/en/stable/user_guide/#requirements-files) to install all needed packages
-- `spec-file.txt` - specification file to create the original [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments)
-
-
-## Workflow
-
-After finalizing your work, you should tag the repository with a version like `v1.0`.
-
-Then, a [Zenodo](https://zenodo.org/) release will be created, so you can cite the repository in you publication.
-
-Please keep your `master` branch in line with the latest release.
-For further development use the `develop` branch and update `master` with pull-requests.
 
 
 ## Contact
 
-You can contact us via <info@geostat-framework.org>.
+You can contact us via a.zech@uu.nl.
 
 
 ## License
 
-MIT © 2020
+MIT © 2024
