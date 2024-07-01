@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/645850928.svg)](https://zenodo.org/doi/10.5281/zenodo.12608026)
+
 # Dipole Tracer Tests
 
 Function collection on analytical solutions for flow in a dipole flow setting 
@@ -20,11 +22,11 @@ non-uniform flow configuration. Local dispersion mechanisms like hydrodynamic
 dispersion or molecular diffusion are less significant and can be neglected.
 
 The aquifer under consideration is non-homogeneous/heterogeneous where the structure
-is layered with a random distribution of hydraulic conductivity values K_i of each
+is layered with a random distribution of hydraulic conductivity values $K_i$ of each
 layer follow a stochastic distribution. In the manuscript Zech et al., 2018, 
 general solutions for the BTC are expressed as integrals. Specific solutions
-are derived considering the spatial distribution of K to be log-normal to a 
-mean KG and a variance sigma_K^2. These specific solutions are implemented here.
+are derived considering the spatial distribution of $K$ to be log-normal to a 
+mean $K_G$ and a variance $\sigma_K^2$. These specific solutions are implemented here.
 
 The BTC solutions present the dependence on both, the dipole setting and the 
 aquifer configuration. The analysis is carried out by considering the travel 
